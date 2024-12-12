@@ -1,0 +1,46 @@
+[
+    {
+        "id": "80",
+        "question": "In a group of 10 people, 8 like Physics, 8 like Maths, and 6 like both. How many people like Physics only?",
+        "options": [
+            1,
+            6,
+            2,
+            2
+        ],
+        "correct": 2
+    },
+    {
+        "id": "37",
+        "question": "In a group of 10 people, 6 like Physics, 6 like Maths, and 2 like both. How many people like Physics only?",
+        "options": [
+            1,
+            4,
+            6,
+            4
+        ],
+        "correct": 4
+    },
+    {
+        "id": "83",
+        "question": "In a group of 10 people, 5 like Physics, 9 like Maths, and 4 like both. How many people like Physics only?",
+        "options": [
+            6,
+            1,
+            8,
+            1
+        ],
+        "correct": 1
+    },
+    {
+        "id": "89",
+        "question": "In a group of 10 people, 6 like Physics, 7 like Maths, and 3 like both. How many people like Physics only?",
+        "options": [
+            3,
+            10,
+            8,
+            3
+        ],
+        "correct": 3
+    }
+]
