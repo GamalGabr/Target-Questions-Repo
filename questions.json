@@ -1,46 +1,145 @@
 [
     {
-        "id": "80",
-        "question": "In a group of 10 people, 8 like Physics, 8 like Maths, and 6 like both. How many people like Physics only?",
+        "id": "81",
+        "question": "In a group of 10 people, 10 like Physics, 5 like Maths, and 5 like both. How many people like Physics only?",
         "options": [
-            1,
-            6,
-            2,
-            2
+            8,
+            10,
+            4,
+            5
         ],
-        "correct": 2
+        "correct": 5
     },
     {
-        "id": "37",
-        "question": "In a group of 10 people, 6 like Physics, 6 like Maths, and 2 like both. How many people like Physics only?",
+        "id": "58",
+        "question": "In a group of 10 people, 5 like Physics, 6 like Maths, and 1 like both. How many people like Physics only?",
         "options": [
-            1,
-            4,
-            6,
+            7,
+            7,
+            3,
             4
         ],
         "correct": 4
     },
     {
-        "id": "83",
-        "question": "In a group of 10 people, 5 like Physics, 9 like Maths, and 4 like both. How many people like Physics only?",
+        "id": "80",
+        "question": "In a group of 10 people, 5 like Physics, 8 like Maths, and 3 like both. How many people like Physics only?",
         "options": [
-            6,
-            1,
-            8,
-            1
+            4,
+            2,
+            3,
+            7
         ],
-        "correct": 1
+        "correct": 2
+    },
+    {
+        "id": "72",
+        "question": "In a group of 10 people, 1 like Physics, 10 like Maths, and 1 like both. How many people like Physics only?",
+        "options": [
+            10,
+            10,
+            0,
+            4
+        ],
+        "correct": 0
+    },
+    {
+        "id": "23",
+        "question": "The initial value was 7, and the new value is 10. What is the percentage change?",
+        "options": [
+            43.0,
+            51.0,
+            42.0,
+            44.0
+        ],
+        "correct": 43.0
+    },
+    {
+        "id": "64",
+        "question": "The initial value was 7, and the new value is 5. What is the percentage change?",
+        "options": [
+            -31.0,
+            -29.0,
+            -23.0,
+            -25.0
+        ],
+        "correct": -29.0
+    },
+    {
+        "id": "92",
+        "question": "The initial value was 2, and the new value is 9. What is the percentage change?",
+        "options": [
+            350.0,
+            358.0,
+            346.0,
+            352.0
+        ],
+        "correct": 350.0
     },
     {
         "id": "89",
-        "question": "In a group of 10 people, 6 like Physics, 7 like Maths, and 3 like both. How many people like Physics only?",
+        "question": "An athlete's chances of qualifying for the Highland Games changed from 1% to 1%. What is the absolute percentage change and the relative percentage change?",
         "options": [
-            3,
-            10,
-            8,
-            3
+            "Absolute: 3%, Relative: 23.0%",
+            "Absolute: 0%, Relative: 0.0%",
+            "Absolute: -2%, Relative: -5.0%",
+            "Absolute: 2%, Relative: 17.0%"
         ],
-        "correct": 3
+        "correct": "Absolute: 0%, Relative: 0.0%"
+    },
+    {
+        "id": "81",
+        "question": "An athlete's chances of qualifying for the Highland Games changed from 5% to 4%. What is the absolute percentage change and the relative percentage change?",
+        "options": [
+            "Absolute: 3%, Relative: 35.0%",
+            "Absolute: -1%, Relative: 11.0%",
+            "Absolute: 1%, Relative: 20.0%",
+            "Absolute: 2%, Relative: 31.0%"
+        ],
+        "correct": "Absolute: 1%, Relative: 20.0%"
+    },
+    {
+        "id": "100",
+        "question": "The numbers are [9, 2, 6]. What is their average?",
+        "options": [
+            3.9,
+            5.67,
+            7.93,
+            7.23
+        ],
+        "correct": 5.67
+    },
+    {
+        "id": "17",
+        "question": "The numbers are [5, 8, 10]. What is their average?",
+        "options": [
+            10.04,
+            6.63,
+            7.67,
+            9.29
+        ],
+        "correct": 7.67
+    },
+    {
+        "id": "5",
+        "question": "In a group of 29 students, 1 are boys. What is the ratio of boys to the total number of students?",
+        "options": [
+            "4:29",
+            "1:29",
+            "9:38",
+            "1:30"
+        ],
+        "correct": "1:29"
+    },
+    {
+        "id": "90",
+        "question": "In a group of 21 students, 5 are boys. What is the ratio of boys to the total number of students?",
+        "options": [
+            "10:21",
+            "12:29",
+            "5:26",
+            "5:21"
+        ],
+        "correct": "5:21"
     }
 ]
