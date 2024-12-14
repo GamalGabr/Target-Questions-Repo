@@ -1,54 +1,67 @@
 [
   {
     "id": "1",
-    "question": "In SQL, an INNER JOIN returns all records where there are matching keys in both tables. The following query counts the number of distinct players participating in matches:\n\n```sql\n-- Select distinct PlayerIDs from the Players table\n-- Join the Matches table on matching PlayerIDs\n-- Count unique PlayerIDs that exist in both tables\nSELECT COUNT(DISTINCT Players.PlayerID) \nFROM Players \nINNER JOIN Matches \nON Players.PlayerID = Matches.PlayerID;\n```",
+    "question": "The following query counts the number of distinct players participating in matches:\n\n```sql\nSELECT COUNT(DISTINCT Players.PlayerID) \nFROM Players \nINNER JOIN Matches \nON Players.PlayerID = Matches.PlayerID;\n```",
     "options": [
-      "SELECT PlayerID FROM Players JOIN Matches ON Players.PlayerID = Matches.PlayerID;",
-      "SELECT COUNT(DISTINCT Players.PlayerID) FROM Players INNER JOIN Matches ON Players.PlayerID = Matches.PlayerID;",
-      "SELECT COUNT(*) FROM Players;",
-      "SELECT DISTINCT Players.PlayerID FROM Players LEFT JOIN Matches;"
+      "len(pd.merge(players, matches, on='PlayerID', how='inner'))",
+      "merged_df['PlayerID'].nunique()",
+      "players['PlayerID'].nunique()",
+      "len(players.merge(matches, on='PlayerID'))"
     ],
-    "correct": "SELECT COUNT(DISTINCT Players.PlayerID) FROM Players INNER JOIN Matches ON Players.PlayerID = Matches.PlayerID;",
-    "commentary": "This query uses an INNER JOIN to combine Players and Matches on matching PlayerIDs. COUNT(DISTINCT ...) ensures that duplicate PlayerIDs are not counted.",
-    "python_equivalent": "import pandas as pd\n\n# Sample data for Players and Matches tables\nplayers = pd.DataFrame({'PlayerID': [1, 2, 3], 'Name': ['Alice', 'Bob', 'Charlie']})\nmatches = pd.DataFrame({'PlayerID': [2, 3, 4], 'MatchID': [101, 102, 103]})\n\n# Perform an inner join between players and matches on PlayerID\n# This combines rows where PlayerIDs match in both tables\nmerged_df = pd.merge(players, matches, on='PlayerID', how='inner')\n\n# Count the distinct PlayerIDs in the result\ndistinct_count = merged_df['PlayerID'].nunique()\nprint(distinct_count)  # Output: 2"
+    "correct": "merged_df['PlayerID'].nunique()",
+    "commentary": "The correct Python equivalent uses pandas' `merge` function to perform an inner join, followed by the `nunique` method to count distinct PlayerIDs.",
+    "python_equivalent": "import pandas as pd\n\n# Sample data for Players and Matches tables\nplayers = pd.DataFrame({'PlayerID': [1, 2, 3], 'Name': ['Alice', 'Bob', 'Charlie']})\nmatches = pd.DataFrame({'PlayerID': [2, 3, 4], 'MatchID': [101, 102, 103]})\n\n# Perform an inner join between players and matches on PlayerID\nmerged_df = pd.merge(players, matches, on='PlayerID', how='inner')\n\n# Count the distinct PlayerIDs in the result\ndistinct_count = merged_df['PlayerID'].nunique()\nprint(distinct_count)  # Output: 2"
   },
   {
     "id": "2",
-    "question": "In SQL, a LEFT JOIN returns all records from the left table and matching records from the right table. To find players who have no matches, we use the following query:\n\n```sql\n-- Select all PlayerIDs from Players\n-- Perform a LEFT JOIN with Matches on PlayerID\n-- Filter rows where Matches.PlayerID is NULL to find players without matches\nSELECT Players.PlayerID \nFROM Players \nLEFT JOIN Matches \nON Players.PlayerID = Matches.PlayerID \nWHERE Matches.PlayerID IS NULL;\n```",
+    "question": "The following query finds players who have no matches:\n\n```sql\nSELECT Players.PlayerID \nFROM Players \nLEFT JOIN Matches \nON Players.PlayerID = Matches.PlayerID \nWHERE Matches.PlayerID IS NULL;\n```",
     "options": [
-      "SELECT Players.PlayerID FROM Players LEFT JOIN Matches ON Players.PlayerID = Matches.PlayerID;",
-      "SELECT Players.PlayerID FROM Players LEFT JOIN Matches ON Players.PlayerID = Matches.PlayerID WHERE Matches.PlayerID IS NULL;",
-      "SELECT COUNT(*) FROM Players;",
-      "SELECT Players.PlayerID FROM Players FULL OUTER JOIN Matches;"
+      "merged_df[merged_df['_merge'] == 'left_only']['PlayerID']",
+      "players.merge(matches, on='PlayerID', how='left', indicator=True)",
+      "merged_df.query('_merge == \"left_only\"')['PlayerID']",
+      "len(players) - len(matches)"
     ],
-    "correct": "SELECT Players.PlayerID FROM Players LEFT JOIN Matches ON Players.PlayerID = Matches.PlayerID WHERE Matches.PlayerID IS NULL;",
-    "commentary": "A LEFT JOIN includes all rows from the left table (Players), even if they have no match in the right table (Matches). Filtering rows with WHERE Matches.PlayerID IS NULL finds players without matches.",
-    "python_equivalent": "import pandas as pd\n\n# Sample data for Players and Matches tables\nplayers = pd.DataFrame({'PlayerID': [1, 2, 3], 'Name': ['Alice', 'Bob', 'Charlie']})\nmatches = pd.DataFrame({'PlayerID': [2, 3], 'MatchID': [101, 102]})\n\n# Perform a left join between players and matches on PlayerID\n# Use the indicator=True option to mark which rows are unmatched\nmerged_df = pd.merge(players, matches, on='PlayerID', how='left', indicator=True)\n\n# Filter rows where '_merge' indicates that the PlayerID is only in the left table\nno_matches = merged_df[merged_df['_merge'] == 'left_only']\nprint(no_matches['PlayerID'].tolist())  # Output: [1]"
+    "correct": "merged_df[merged_df['_merge'] == 'left_only']['PlayerID']",
+    "commentary": "To find players without matches in Python, use pandas' `merge` with `how='left'` and `indicator=True`, then filter where `_merge` equals `'left_only'`.",
+    "python_equivalent": "import pandas as pd\n\n# Sample data for Players and Matches tables\nplayers = pd.DataFrame({'PlayerID': [1, 2, 3], 'Name': ['Alice', 'Bob', 'Charlie']})\nmatches = pd.DataFrame({'PlayerID': [2, 3], 'MatchID': [101, 102]})\n\n# Perform a left join between players and matches on PlayerID\nmerged_df = pd.merge(players, matches, on='PlayerID', how='left', indicator=True)\n\n# Filter rows where '_merge' indicates that the PlayerID is only in the left table\nno_matches = merged_df[merged_df['_merge'] == 'left_only']\nprint(no_matches['PlayerID'].tolist())  # Output: [1]"
   },
   {
     "id": "3",
-    "question": "In SQL, the GROUP BY clause groups rows by a column and performs aggregate functions on each group. The following query counts the number of matches each player has participated in:\n\n```sql\n-- Group the Matches table by PlayerID\n-- Count the number of matches for each player\nSELECT PlayerID, COUNT(*) AS MatchCount \nFROM Matches \nGROUP BY PlayerID;\n```",
+    "question": "The following query counts the number of matches each player has participated in:\n\n```sql\nSELECT PlayerID, COUNT(*) AS MatchCount \nFROM Matches \nGROUP BY PlayerID;\n```",
     "options": [
-      "SELECT PlayerID, COUNT(*) AS MatchCount FROM Matches GROUP BY PlayerID;",
-      "SELECT DISTINCT PlayerID FROM Matches;",
-      "SELECT COUNT(*) FROM Matches;",
-      "SELECT PlayerID FROM Matches;"
+      "matches.groupby('PlayerID').size()",
+      "matches.groupby('PlayerID').count()",
+      "matches['PlayerID'].value_counts()",
+      "matches.groupby('PlayerID').size().reset_index(name='MatchCount')"
     ],
-    "correct": "SELECT PlayerID, COUNT(*) AS MatchCount FROM Matches GROUP BY PlayerID;",
-    "commentary": "The GROUP BY clause groups rows by PlayerID, and the COUNT(*) function calculates the number of rows (matches) in each group.",
+    "correct": "matches.groupby('PlayerID').size().reset_index(name='MatchCount')",
+    "commentary": "In Python, the equivalent of GROUP BY in SQL is pandas' `groupby`, and COUNT(*) can be achieved using `size` or `count`. Here, `reset_index` is used to convert the result back into a DataFrame.",
     "python_equivalent": "import pandas as pd\n\n# Sample data for Matches table\nmatches = pd.DataFrame({'PlayerID': [1, 2, 2, 3], 'MatchID': [101, 102, 103, 104]})\n\n# Group the Matches table by PlayerID and count the number of rows in each group\nmatch_counts = matches.groupby('PlayerID').size().reset_index(name='MatchCount')\nprint(match_counts)\n# Output:\n#    PlayerID  MatchCount\n# 0         1           1\n# 1         2           2\n# 2         3           1"
   },
   {
     "id": "4",
-    "question": "In SQL, the HAVING clause filters grouped rows based on aggregate conditions. The following query finds players who have participated in more than 2 matches:\n\n```sql\n-- Group the Matches table by PlayerID\n-- Use the HAVING clause to filter groups with more than 2 matches\nSELECT PlayerID \nFROM Matches \nGROUP BY PlayerID \nHAVING COUNT(*) > 2;\n```",
+    "question": "The following query finds players who have participated in more than 2 matches:\n\n```sql\nSELECT PlayerID \nFROM Matches \nGROUP BY PlayerID \nHAVING COUNT(*) > 2;\n```",
     "options": [
-      "SELECT PlayerID FROM Matches GROUP BY PlayerID HAVING COUNT(*) > 2;",
-      "SELECT PlayerID FROM Matches WHERE COUNT(*) > 2;",
-      "SELECT COUNT(*) FROM Matches WHERE COUNT(*) > 2;",
-      "SELECT DISTINCT PlayerID FROM Matches;"
+      "matches.groupby('PlayerID').filter(lambda x: len(x) > 2)",
+      "matches.groupby('PlayerID').size().query('size > 2')",
+      "matches.groupby('PlayerID').agg('count').query('size > 2')",
+      "matches.groupby('PlayerID').size().reset_index(name='MatchCount').query('MatchCount > 2')"
     ],
-    "correct": "SELECT PlayerID FROM Matches GROUP BY PlayerID HAVING COUNT(*) > 2;",
-    "commentary": "The HAVING clause allows filtering grouped results after aggregation. Here, it selects only PlayerIDs with more than 2 matches.",
-    "python_equivalent": "import pandas as pd\n\n# Sample data for Matches table\nmatches = pd.DataFrame({'PlayerID': [1, 2, 2, 2, 3, 3], 'MatchID': [101, 102, 103, 104, 105, 106]})\n\n# Group the Matches table by PlayerID\n# Filter groups with more than 2 matches using a lambda function\nfiltered_players = matches.groupby('PlayerID').filter(lambda x: len(x) > 2)\nprint(filtered_players['PlayerID'].unique())  # Output: [2]"
+    "correct": "matches.groupby('PlayerID').size().reset_index(name='MatchCount').query('MatchCount > 2')",
+    "commentary": "To replicate HAVING COUNT(*) > 2 in pandas, use `groupby` and `size` to count rows, then filter using `query`.",
+    "python_equivalent": "import pandas as pd\n\n# Sample data for Matches table\nmatches = pd.DataFrame({'PlayerID': [1, 2, 2, 2, 3, 3], 'MatchID': [101, 102, 103, 104, 105, 106]})\n\n# Group the Matches table by PlayerID\n# Count matches per player and filter groups with more than 2 matches\nfiltered_players = matches.groupby('PlayerID').size().reset_index(name='MatchCount').query('MatchCount > 2')\nprint(filtered_players)\n# Output:\n#    PlayerID  MatchCount\n# 1         2           3"
+  },
+  {
+    "id": "5",
+    "question": "The following query combines all unique PlayerIDs from Players and Matches:\n\n```sql\nSELECT PlayerID \nFROM Players \nUNION \nSELECT PlayerID \nFROM Matches;\n```",
+    "options": [
+      "pd.concat([players['PlayerID'], matches['PlayerID']]).drop_duplicates()",
+      "players['PlayerID'].append(matches['PlayerID']).unique()",
+      "pd.merge(players, matches, on='PlayerID', how='outer')['PlayerID'].unique()",
+      "players['PlayerID'].combine_first(matches['PlayerID']).unique()"
+    ],
+    "correct": "pd.concat([players['PlayerID'], matches['PlayerID']]).drop_duplicates()",
+    "commentary": "In Python, the UNION operation is replicated by concatenating the columns of the two DataFrames and removing duplicates using `drop_duplicates`.",
+    "python_equivalent": "import pandas as pd\n\n# Sample data for Players and Matches tables\nplayers = pd.DataFrame({'PlayerID': [1, 2, 3]})\nmatches = pd.DataFrame({'PlayerID': [3, 4, 5]})\n\n# Combine PlayerIDs from both DataFrames and remove duplicates\nunion_df = pd.concat([players['PlayerID'], matches['PlayerID']]).drop_duplicates()\nprint(union_df)\n# Output:\n# 0    1\n# 1    2\n# 2    3\n# 3    4\n# 4    5"
   }
 ]
