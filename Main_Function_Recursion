@@ -1,0 +1,112 @@
+[
+  {
+    "id": "101",
+    "question": "What does the line 'if __name__ == \"__main__\":' mean in a Python file?",
+    "options": [
+      "Run only if the file is imported",
+      "Run only if the file is executed directly",
+      "Run when any function is called",
+      "Run only if the file is saved as main.py"
+    ],
+    "correct": "Run only if the file is executed directly"
+  },
+  {
+    "id": "102",
+    "question": "What happens to the code inside 'if __name__ == \"__main__\":' when you import the file into another script?",
+    "options": [
+      "It runs automatically",
+      "It gets ignored",
+      "It runs twice",
+      "It gets renamed"
+    ],
+    "correct": "It gets ignored"
+  },
+  {
+    "id": "103",
+    "question": "In the function below, what is the base case?\n\ndef add_digits(n):\n    if n == 0:\n        return 0\n    else:\n        return n % 10 + add_digits(n // 10)",
+    "options": [
+      "n % 10",
+      "n == 0",
+      "n // 10",
+      "return 0"
+    ],
+    "correct": "n == 0"
+  },
+  {
+    "id": "104",
+    "question": "What value is returned by add_digits(105)?",
+    "options": [
+      6,
+      5,
+      1,
+      7
+    ],
+    "correct": 6
+  },
+  {
+    "id": "105",
+    "question": "Why does recursion need a base case?",
+    "options": [
+      "To avoid using loops",
+      "To make the function faster",
+      "To prevent infinite function calls",
+      "To reduce memory"
+    ],
+    "correct": "To prevent infinite function calls"
+  },
+  {
+    "id": "106",
+    "question": "What is the purpose of n % 10 in add_digits(n)?",
+    "options": [
+      "Removes the last digit",
+      "Multiplies digits",
+      "Gets the last digit",
+      "Stops recursion"
+    ],
+    "correct": "Gets the last digit"
+  },
+  {
+    "id": "107",
+    "question": "Which of these best describes recursion?",
+    "options": [
+      "A loop inside a function",
+      "A function that calls another function",
+      "A function that calls itself",
+      "A function that stops at zero"
+    ],
+    "correct": "A function that calls itself"
+  },
+  {
+    "id": "108",
+    "question": "What is the output of this code?\n\ndef add_digits(n):\n    if n == 0:\n        return 0\n    else:\n        return n % 10 + add_digits(n // 10)\n\nprint(add_digits(321))",
+    "options": [
+      6,
+      3,
+      5,
+      9
+    ],
+    "correct": 6
+  },
+  {
+    "id": "109",
+    "question": "When you use a file as a module in another script, what should NOT happen?",
+    "options": [
+      "Its functions are imported",
+      "Its variables are available",
+      "Its __main__ block runs",
+      "Its definitions are loaded"
+    ],
+    "correct": "Its __main__ block runs"
+  },
+  {
+    "id": "110",
+    "question": "How many times is add_digits called when computing add_digits(301)?",
+    "options": [
+      2,
+      3,
+      1,
+      4
+    ],
+    "correct": 3
+  }
+]
