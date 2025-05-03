@@ -1,0 +1,716 @@
+[
+    {
+        "id": "201",
+        "question": "What is the range of values a sigmoid function can output?",
+        "options": [
+            "0 to 1",
+            "-1 to 1",
+            "0 to infinity",
+            "-infinity to +infinity"
+        ],
+        "correct": "0 to 1"
+    },
+    {
+        "id": "202",
+        "question": "What is the output of the sigmoid function when its input z = 0?",
+        "options": [
+            "0",
+            "1",
+            "0.5",
+            "Undefined"
+        ],
+        "correct": "0.5"
+    },
+    {
+        "id": "203",
+        "question": "Which of the following values of z will cause the sigmoid function to output a value close to 0?",
+        "options": [
+            "z = 10",
+            "z = -10",
+            "z = 0",
+            "z = 1"
+        ],
+        "correct": "z = -10"
+    },
+    {
+        "id": "204",
+        "question": "Why can logistic regression not model a bump-like decision boundary?",
+        "options": [
+            "It uses too many features",
+            "It has no bias term",
+            "It is monotonic and uses a linear boundary",
+            "It uses sigmoid too many times"
+        ],
+        "correct": "It is monotonic and uses a linear boundary"
+    },
+    {
+        "id": "205",
+        "question": "In a neural network, what allows the creation of a bump-shaped output?",
+        "options": [
+            "One sigmoid neuron",
+            "Sum of opposing sigmoid activations",
+            "Multiplying inputs directly",
+            "Removing the sigmoid function"
+        ],
+        "correct": "Sum of opposing sigmoid activations"
+    },
+    {
+        "id": "206",
+        "question": "What is the typical output of the sigmoid function when the input is a large positive number?",
+        "options": [
+            "Exactly 0",
+            "Close to 1",
+            "Exactly 0.5",
+            "Negative"
+        ],
+        "correct": "Close to 1"
+    },
+    {
+        "id": "207",
+        "question": "What is the shape of the decision boundary produced by logistic regression in 2D?",
+        "options": [
+            "Curved region",
+            "Circular",
+            "Box-shaped",
+            "Straight line"
+        ],
+        "correct": "Straight line"
+    },
+    {
+        "id": "208",
+        "question": "If a neural network outputs high values only when x is between 2 and 4, what type of activation pattern is being used?",
+        "options": [
+            "Ramp down only",
+            "Ramp up only",
+            "Bump using two sigmoids",
+            "Random initialization"
+        ],
+        "correct": "Bump using two sigmoids"
+    },
+    {
+        "id": "209",
+        "question": "What is the main reason neural networks can model complex boundaries that logistic regression cannot?",
+        "options": [
+            "They use fewer parameters",
+            "They use non-monotonic combinations of sigmoids",
+            "They ignore bias",
+            "They use no activation functions"
+        ],
+        "correct": "They use non-monotonic combinations of sigmoids"
+    },
+    {
+        "id": "210",
+        "question": "What is the sigmoid output approximately when z = -5?",
+        "options": [
+            "0.99",
+            "0.73",
+            "0.0067",
+            "0.5"
+        ],
+        "correct": "0.0067"
+    }
+]
+
+
+
+
+
+
+[
+  {
+    "id": "401",
+    "question": "In Isolation Forest, the anomaly score for a point is computed as s(x, n) = 2^(-E(h(x))/c(n)). What does E(h(x)) represent?",
+    "options": [
+      "Expected height of the tree containing x",
+      "Expected number of times x is split",
+      "Expected path length to isolate x",
+      "Expected number of neighbors of x"
+    ],
+    "correct": "Expected path length to isolate x"
+  },
+  {
+    "id": "402",
+    "question": "In the anomaly score formula s(x, n) = 2^(-E(h(x))/c(n)), what does increasing E(h(x)) do to the anomaly score?",
+    "options": [
+      "Increases it",
+      "Decreases it",
+      "Keeps it constant",
+      "Sets it to 1"
+    ],
+    "correct": "Decreases it"
+  },
+  {
+    "id": "403",
+    "question": "In the Isolation Forest anomaly score formula s(x, n) = 2^(-E(h(x))/c(n)), what is c(n)?",
+    "options": [
+      "Expected depth of a random tree",
+      "Average path length of unsuccessful search in Binary Search Tree",
+      "Normalization factor for average path length in trees of size n",
+      "Cluster compactness constant"
+    ],
+    "correct": "Normalization factor for average path length in trees of size n"
+  },
+  {
+    "id": "404",
+    "question": "What is the typical range of anomaly scores in Isolation Forest?",
+    "options": [
+      "[0, 1]",
+      "[-1, 1]",
+      "[0, ∞)",
+      "[−∞, ∞]"
+    ],
+    "correct": "[0, 1]"
+  },
+  {
+    "id": "405",
+    "question": "Adjusted R² is calculated as 1 - [(1 - R²)(n - 1)/(n - p - 1)]. What does this formula account for?",
+    "options": [
+      "Adjusting for feature scaling",
+      "Adjusting R² to penalize adding predictors",
+      "Weighting R² for residual variance",
+      "Removing intercept bias"
+    ],
+    "correct": "Adjusting R² to penalize adding predictors"
+  },
+  {
+    "id": "406",
+    "question": "Which component in the adjusted R² formula penalizes the model for including too many predictors?",
+    "options": [
+      "(1 - R²)",
+      "(n - 1)",
+      "(n - p - 1)",
+      "R² only"
+    ],
+    "correct": "(n - p - 1)"
+  },
+  {
+    "id": "407",
+    "question": "What does Adjusted R² measure relative to the mean model?",
+    "options": [
+      "How much variance is explained, adjusted for number of predictors",
+      "Total correlation of residuals",
+      "Prediction error normalized by standard deviation",
+      "Average cluster purity"
+    ],
+    "correct": "How much variance is explained, adjusted for number of predictors"
+  },
+  {
+    "id": "408",
+    "question": "In silhouette scoring, what do a(i) and b(i) represent for point i?",
+    "options": [
+      "a(i) is intra-cluster distance; b(i) is nearest-cluster distance",
+      "a(i) is centroid distance; b(i) is random cluster distance",
+      "a(i) is anomaly score; b(i) is path length",
+      "a(i) and b(i) are sample weights"
+    ],
+    "correct": "a(i) is intra-cluster distance; b(i) is nearest-cluster distance"
+  },
+  {
+    "id": "409",
+    "question": "What is the mathematical formula for the silhouette score of a point?",
+    "options": [
+      "(b(i) - a(i)) / max(a(i), b(i))",
+      "(a(i) - b(i)) / min(a(i), b(i))",
+      "a(i) / b(i)",
+      "b(i) / a(i)"
+    ],
+    "correct": "(b(i) - a(i)) / max(a(i), b(i))"
+  },
+  {
+    "id": "410",
+    "question": "What type of logistic regression model comparison can be evaluated using the likelihood ratio test?",
+    "options": [
+      "Two models with the same number of parameters",
+      "Two models on different datasets",
+      "Two nested models where one adds variables to the other",
+      "Two models with random coefficients"
+    ],
+    "correct": "Two nested models where one adds variables to the other"
+  },
+  {
+    "id": "411",
+    "question": "What does the ROC curve plot on the X and Y axes?",
+    "options": [
+      "X: Recall, Y: Precision",
+      "X: False Positive Rate, Y: True Positive Rate",
+      "X: Accuracy, Y: Error Rate",
+      "X: Specificity, Y: Sensitivity"
+    ],
+    "correct": "X: False Positive Rate, Y: True Positive Rate"
+  },
+  {
+    "id": "412",
+    "question": "Which value of AUC indicates a perfect binary classifier?",
+    "options": [
+      "1.0",
+      "0.75",
+      "0.5",
+      "0"
+    ],
+    "correct": "1.0"
+  },
+  {
+    "id": "413",
+    "question": "Why is AUC considered threshold-independent?",
+    "options": [
+      "It averages accuracy over all decision thresholds",
+      "It considers only the best threshold for classification",
+      "It is normalized by the number of samples",
+      "It ignores false negatives"
+    ],
+    "correct": "It averages accuracy over all decision thresholds"
+  },
+  {
+    "id": "414",
+    "question": "Which scenario would likely result in a negative silhouette score for a point?",
+    "options": [
+      "It lies closer to another cluster than its assigned cluster",
+      "It is the only member of its cluster",
+      "It is an outlier far from all clusters",
+      "It has equal distance to multiple clusters"
+    ],
+    "correct": "It lies closer to another cluster than its assigned cluster"
+  },
+  {
+    "id": "415",
+    "question": "In linear regression, a p-value < 0.05 for a predictor implies what?",
+    "options": [
+      "The predictor is significantly related to the outcome",
+      "The model is overfitting",
+      "The residuals are homoscedastic",
+      "The predictor has high variance"
+    ],
+    "correct": "The predictor is significantly related to the outcome"
+  },
+  {
+    "id": "416",
+    "question": "What does a variance inflation factor (VIF) > 10 usually indicate?",
+    "options": [
+      "Good predictor strength",
+      "Multicollinearity between predictors",
+      "High model accuracy",
+      "Overfitting on test data"
+    ],
+    "correct": "Multicollinearity between predictors"
+  }
+]
+
+
+[
+  {
+    "id": "501",
+    "question": "In binary classification, what is a true positive (TP)?",
+    "options": [
+      "The model predicted negative and it was actually negative",
+      "The model predicted positive and it was actually positive",
+      "The model predicted positive and it was actually negative",
+      "The model predicted negative and it was actually positive"
+    ],
+    "correct": "The model predicted positive and it was actually positive"
+  },
+  {
+    "id": "502",
+    "question": "What is a false negative (FN)?",
+    "options": [
+      "Model predicted negative, actual was positive",
+      "Model predicted positive, actual was negative",
+      "Model predicted negative, actual was negative",
+      "Model predicted positive, actual was positive"
+    ],
+    "correct": "Model predicted negative, actual was positive"
+  },
+  {
+    "id": "503",
+    "question": "What is a false positive (FP)?",
+    "options": [
+      "Model predicted positive, actual was negative",
+      "Model predicted negative, actual was positive",
+      "Model predicted positive, actual was positive",
+      "Model predicted negative, actual was negative"
+    ],
+    "correct": "Model predicted positive, actual was negative"
+  },
+  {
+    "id": "504",
+    "question": "Which formula represents precision?",
+    "options": [
+      "TP / (TP + FN)",
+      "TP / (TP + FP)",
+      "TN / (TN + FP)",
+      "TP / (TP + TN)"
+    ],
+    "correct": "TP / (TP + FP)"
+  },
+  {
+    "id": "505",
+    "question": "Which formula represents recall (sensitivity)?",
+    "options": [
+      "TP / (TP + FP)",
+      "TN / (TN + FP)",
+      "TP / (TP + FN)",
+      "TP / Total"
+    ],
+    "correct": "TP / (TP + FN)"
+  },
+  {
+    "id": "506",
+    "question": "Which metric captures the proportion of actual negatives correctly predicted?",
+    "options": [
+      "Precision",
+      "Recall",
+      "Specificity",
+      "F1 Score"
+    ],
+    "correct": "Specificity"
+  },
+  {
+    "id": "507",
+    "question": "What is the formula for specificity?",
+    "options": [
+      "TN / (TN + FP)",
+      "TP / (TP + FP)",
+      "TN / (TN + FN)",
+      "TP / (TP + FN)"
+    ],
+    "correct": "TN / (TN + FP)"
+  },
+  {
+    "id": "508",
+    "question": "What does accuracy measure?",
+    "options": [
+      "How many positives are found correctly",
+      "How many predictions are true overall",
+      "How well the model avoids false positives",
+      "Only recall of positives"
+    ],
+    "correct": "How many predictions are true overall"
+  },
+  {
+    "id": "509",
+    "question": "Which formula represents accuracy?",
+    "options": [
+      "(TP + TN) / Total",
+      "TP / (TP + FP)",
+      "TN / (TN + FP)",
+      "TP / (TP + FN)"
+    ],
+    "correct": "(TP + TN) / Total"
+  },
+  {
+    "id": "510",
+    "question": "Why can accuracy be misleading in imbalanced datasets?",
+    "options": [
+      "It depends only on precision",
+      "It can be high even if the minority class is never predicted",
+      "It ignores true negatives",
+      "It is always equal to recall"
+    ],
+    "correct": "It can be high even if the minority class is never predicted"
+  },
+  {
+    "id": "511",
+    "question": "What does the F1 score balance?",
+    "options": [
+      "Precision and specificity",
+      "Recall and specificity",
+      "Precision and recall",
+      "Accuracy and recall"
+    ],
+    "correct": "Precision and recall"
+  },
+  {
+    "id": "512",
+    "question": "What is the formula for F1 score?",
+    "options": [
+      "(Precision + Recall) / 2",
+      "2 × (Precision × Recall) / (Precision + Recall)",
+      "Precision / Recall",
+      "Recall / Precision"
+    ],
+    "correct": "2 × (Precision × Recall) / (Precision + Recall)"
+  },
+  {
+    "id": "513",
+    "question": "What does the F-beta score do?",
+    "options": [
+      "Penalize false positives only",
+      "Measure total accuracy",
+      "Balance precision and recall with a configurable weight",
+      "Measure specificity"
+    ],
+    "correct": "Balance precision and recall with a configurable weight"
+  },
+  {
+    "id": "514",
+    "question": "If beta = 1 in F-beta, which metric do we get?",
+    "options": [
+      "F0.5",
+      "F1",
+      "F2",
+      "Accuracy"
+    ],
+    "correct": "F1"
+  },
+  {
+    "id": "515",
+    "question": "In the F0.5 score, which part is given more importance and why?",
+    "options": [
+      "Precision, because it is multiplied more than recall in the formula",
+      "Recall, because we want to find all positives",
+      "Precision, because it includes true negatives",
+      "Recall, because false negatives matter more"
+    ],
+    "correct": "Precision, because it is multiplied more than recall in the formula"
+  },
+  {
+    "id": "516",
+    "question": "In the F2 score, which part is given more importance and why?",
+    "options": [
+      "Recall, because it is multiplied more than precision in the formula",
+      "Precision, because it affects false positives",
+      "Precision, because it is used in the numerator twice",
+      "Recall, because it avoids false positives"
+    ],
+    "correct": "Recall, because it is multiplied more than precision in the formula"
+  },
+  {
+    "id": "517",
+    "question": "In a medical test where missing a disease is dangerous, which F-beta score is most appropriate?",
+    "options": [
+      "F0.5",
+      "F1",
+      "F2",
+      "Precision only"
+    ],
+    "correct": "F2"
+  },
+  {
+    "id": "518",
+    "question": "If you are developing a spam filter where false positives are very bad (real emails marked spam), which F-score should be preferred?",
+    "options": [
+      "F0.5",
+      "F1",
+      "F2",
+      "Recall only"
+    ],
+    "correct": "F0.5"
+  },
+  {
+    "id": "519",
+    "question": "Which metric increases when false negatives are reduced?",
+    "options": [
+      "Precision",
+      "Specificity",
+      "Recall",
+      "Accuracy"
+    ],
+    "correct": "Recall"
+  },
+  {
+    "id": "520",
+    "question": "If a classifier has perfect recall but low precision, what might be happening?",
+    "options": [
+      "It finds all positives but includes many false alarms",
+      "It avoids false positives",
+      "It predicts too few positives",
+      "It makes no errors"
+    ],
+    "correct": "It finds all positives but includes many false alarms"
+  },
+  {
+    "id": "521",
+    "question": "Is it possible to have a high F1 score but a very low specificity (true negative rate)? Why?",
+    "options": [
+      "Yes, because F1 only cares about precision and recall for positives, not how well negatives are classified",
+      "No, because F1 score always increases with specificity",
+      "No, because F1 includes true negatives in its formula",
+      "Yes, because specificity and F1 score always move together"
+    ],
+    "correct": "Yes, because F1 only cares about precision and recall for positives, not how well negatives are classified"
+  }
+]
+
+
+
+
+
+
+
+[
+    {
+        "id": "401",
+        "question": "In logistic regression, a positive coefficient for a continuous predictor implies that:",
+        "options": [
+            "As the predictor increases, the odds of the outcome increase",
+            "The predictor is unrelated to the outcome",
+            "As the predictor increases, the log-odds decrease",
+            "The predictor must be binary"
+        ],
+        "correct": "As the predictor increases, the odds of the outcome increase"
+    },
+    {
+        "id": "402",
+        "question": "In logistic regression, what does a coefficient for a binary (0/1) predictor represent?",
+        "options": [
+            "The log-odds difference between the two categories",
+            "The probability of success for category 1",
+            "The mean of the binary variable",
+            "The slope of the linear predictor"
+        ],
+        "correct": "The log-odds difference between the two categories"
+    },
+    {
+        "id": "403",
+        "question": "What is the range of predicted probabilities in logistic regression?",
+        "options": [
+            "From 0 to 1",
+            "From -1 to 1",
+            "From 0 to infinity",
+            "From -∞ to ∞"
+        ],
+        "correct": "From 0 to 1"
+    },
+    {
+        "id": "404",
+        "question": "Logistic regression models the relationship between the predictors and:",
+        "options": [
+            "The log-odds of the binary outcome",
+            "The raw probability of the outcome",
+            "The z-score of the outcome",
+            "The actual value of the response variable"
+        ],
+        "correct": "The log-odds of the binary outcome"
+    },
+    {
+        "id": "405",
+        "question": "What does the intercept represent in a logistic regression model?",
+        "options": [
+            "The log-odds of the outcome when all predictors are 0",
+            "The average of the predicted probabilities",
+            "The odds ratio when predictors equal 1",
+            "The slope of the regression line"
+        ],
+        "correct": "The log-odds of the outcome when all predictors are 0"
+    },
+    {
+        "id": "406",
+        "question": "If a logistic regression coefficient is statistically significant, it suggests that:",
+        "options": [
+            "The predictor has a non-zero relationship with the log-odds of the outcome",
+            "The model will predict perfectly",
+            "The outcome variable is continuous",
+            "All other predictors are also significant"
+        ],
+        "correct": "The predictor has a non-zero relationship with the log-odds of the outcome"
+    },
+    {
+        "id": "407",
+        "question": "A statistically significant interaction term in logistic regression indicates that:",
+        "options": [
+            "The effect of one variable changes depending on the level of another",
+            "The predictors are strongly correlated",
+            "The model has overfit the training data",
+            "There is multicollinearity"
+        ],
+        "correct": "The effect of one variable changes depending on the level of another"
+    },
+    {
+        "id": "408",
+        "question": "Which function is used in logistic regression to convert log-odds to predicted probabilities?",
+        "options": [
+            "Sigmoid (logistic) function",
+            "Exponential function",
+            "Linear transformation",
+            "Hyperbolic tangent"
+        ],
+        "correct": "Sigmoid (logistic) function"
+    },
+    {
+        "id": "409",
+        "question": "Exponentiating a logistic regression coefficient gives:",
+        "options": [
+            "The odds ratio for a one-unit increase in the predictor",
+            "The predicted probability",
+            "The standard error",
+            "The correlation between variables"
+        ],
+        "correct": "The odds ratio for a one-unit increase in the predictor"
+    },
+    {
+        "id": "410",
+        "question": "A logistic regression coefficient of 0.69 implies that:",
+        "options": [
+            "The odds increase by a factor of 2 for each unit increase in the predictor",
+            "The predicted probability is 69%",
+            "The predictor is not significant",
+            "The response variable is increasing exponentially"
+        ],
+        "correct": "The odds increase by a factor of 2 for each unit increase in the predictor"
+    },
+    {
+        "id": "411",
+        "question": "Which of the following best describes the relationship in logistic regression?",
+        "options": [
+            "Predictors are linearly related to the log-odds of the outcome",
+            "Predictors are linearly related to the probability",
+            "Response variable must be numeric",
+            "Predictors are transformed into categories"
+        ],
+        "correct": "Predictors are linearly related to the log-odds of the outcome"
+    },
+    {
+        "id": "412",
+        "question": "If the input to the sigmoid function is 0, what is the predicted probability?",
+        "options": [
+            "0.5",
+            "1.0",
+            "0.0",
+            "Depends on the number of predictors"
+        ],
+        "correct": "0.5"
+    },
+    {
+        "id": "413",
+        "question": "What shape does the sigmoid function have?",
+        "options": [
+            "S-shaped and monotonic",
+            "Linear",
+            "Step-function",
+            "Bell-shaped"
+        ],
+        "correct": "S-shaped and monotonic"
+    },
+    {
+        "id": "414",
+        "question": "An odds ratio of 1 for a predictor indicates that:",
+        "options": [
+            "There is no change in odds as the predictor changes",
+            "The outcome always occurs",
+            "The predictor is highly correlated with the response",
+            "The variable is a constant"
+        ],
+        "correct": "There is no change in odds as the predictor changes"
+    },
+    {
+        "id": "415",
+        "question": "What does a negative coefficient mean in logistic regression?",
+        "options": [
+            "Increasing the predictor reduces the odds of the outcome",
+            "The outcome is guaranteed",
+            "The response variable is negative",
+            "The predictor should be removed"
+        ],
+        "correct": "Increasing the predictor reduces the odds of the outcome"
+    },
+    {
+        "id": "416",
+        "question": "If an interaction term A×B is included in the logistic regression model, it means that:",
+        "options": [
+            "The effect of A on the outcome varies by the level of B",
+            "A and B must be binary",
+            "The variables A and B are perfectly correlated",
+            "The model has no intercept"
+        ],
+        "correct": "The effect of A on the outcome varies by the level of B"
+    }
+]
