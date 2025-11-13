@@ -1,125 +1,125 @@
 [
     {
-        "id": "29",
-        "question": "In a group of 10 people, 9 like Physics, 7 like Maths, and 6 like both. How many people like Physics only?",
-        "options": [
-            3,
-            9,
-            4,
-            4
-        ],
-        "correct": 3
-    },
-    {
-        "id": "32",
-        "question": "In a group of 10 people, 10 like Physics, 2 like Maths, and 2 like both. How many people like Physics only?",
-        "options": [
-            4,
-            1,
-            9,
-            8
-        ],
-        "correct": 8
-    },
-    {
-        "id": "88",
+        "id": "50",
         "question": "In a group of 10 people, 8 like Physics, 9 like Maths, and 7 like both. How many people like Physics only?",
         "options": [
             1,
-            5,
-            2,
-            3
+            9,
+            10,
+            8
         ],
         "correct": 1
     },
     {
-        "id": "88",
-        "question": "In a group of 10 people, 3 like Physics, 10 like Maths, and 3 like both. How many people like Physics only?",
+        "id": "13",
+        "question": "In a group of 10 people, 10 like Physics, 3 like Maths, and 3 like both. How many people like Physics only?",
+        "options": [
+            9,
+            5,
+            9,
+            7
+        ],
+        "correct": 7
+    },
+    {
+        "id": "4",
+        "question": "In a group of 10 people, 10 like Physics, 4 like Maths, and 4 like both. How many people like Physics only?",
+        "options": [
+            5,
+            6,
+            6,
+            2
+        ],
+        "correct": 6
+    },
+    {
+        "id": "9",
+        "question": "In a group of 10 people, 10 like Physics, 8 like Maths, and 8 like both. How many people like Physics only?",
         "options": [
             3,
-            7,
-            0,
-            10
+            8,
+            2,
+            5
         ],
-        "correct": 0
+        "correct": 2
     },
     {
-        "id": "82",
-        "question": "The initial value was 8, and the new value is 9. What is the percentage change?",
+        "id": "17",
+        "question": "The initial value was 4, and the new value is 3. What is the percentage change?",
         "options": [
-            12.0,
-            7.0,
-            14.0,
-            22.0
+            -23.0,
+            -26.0,
+            -25.0,
+            -17.0
         ],
-        "correct": 12.0
+        "correct": -25.0
     },
     {
-        "id": "92",
-        "question": "The initial value was 7, and the new value is 9. What is the percentage change?",
+        "id": "0",
+        "question": "The initial value was 4, and the new value is 9. What is the percentage change?",
         "options": [
-            29.0,
-            27.0,
-            37.0,
-            33.0
+            125.0,
+            123.0,
+            133.0,
+            126.0
         ],
-        "correct": 29.0
+        "correct": 125.0
     },
     {
-        "id": "84",
-        "question": "The initial value was 4, and the new value is 1. What is the percentage change?",
+        "id": "5",
+        "question": "The initial value was 5, and the new value is 6. What is the percentage change?",
         "options": [
-            -80.0,
-            -70.0,
-            -65.0,
-            -75.0
+            17.0,
+            25.0,
+            20.0,
+            25.0
         ],
-        "correct": -75.0
+        "correct": 20.0
     },
     {
-        "id": "10",
-        "question": "An athlete's chances of qualifying for the Highland Games changed from 9% to 14%. What is the absolute percentage change and the relative percentage change?",
+        "id": "27",
+        "question": "An athlete's chances of qualifying for the Highland Games changed from 3% to 7%. What is the absolute percentage change and the relative percentage change?",
         "options": [
-            "Absolute: 7%, Relative: 74.0%",
-            "Absolute: 5%, Relative: 56.0%",
-            "Absolute: 7%, Relative: 75.0%",
-            "Absolute: 4%, Relative: 48.0%"
+            "Absolute: 6%, Relative: 145.0%",
+            "Absolute: 4%, Relative: 133.0%",
+            "Absolute: 3%, Relative: 126.0%",
+            "Absolute: 6%, Relative: 161.0%"
         ],
-        "correct": "Absolute: 5%, Relative: 56.0%"
+        "correct": "Absolute: 4%, Relative: 133.0%"
     },
     {
-        "id": "2",
-        "question": "An athlete's chances of qualifying for the Highland Games changed from 10% to 7%. What is the absolute percentage change and the relative percentage change?",
+        "id": "78",
+        "question": "An athlete's chances of qualifying for the Highland Games changed from 3% to 1%. What is the absolute percentage change and the relative percentage change?",
         "options": [
-            "Absolute: 6%, Relative: 54.0%",
-            "Absolute: 6%, Relative: 48.0%",
-            "Absolute: 3%, Relative: 30.0%",
-            "Absolute: 1%, Relative: 24.0%"
+            "Absolute: 2%, Relative: 67.0%",
+            "Absolute: 1%, Relative: 59.0%",
+            "Absolute: 3%, Relative: 86.0%",
+            "Absolute: 4%, Relative: 94.0%"
         ],
-        "correct": "Absolute: 3%, Relative: 30.0%"
+        "correct": "Absolute: 2%, Relative: 67.0%"
     },
     {
-        "id": "66",
-        "question": "If it takes 6 machines 5 minutes to make 14 crackers, how long would it take 60 machines to make 28 crackers?",
+        "id": "78",
+        "question": "If it takes 3 machines 5 minutes to make 13 crackers, how long would it take 30 machines to make 52 crackers?",
         "options": [
-            "3.00 minutes",
-            "5.25 minutes",
-            "1.0 minutes",
-            "-0.34 minutes",
-            "3.00 minutes"
+            "3.09 minutes",
+            "1.01 minutes",
+            "2.0 minutes",
+            "6.29 minutes",
+            "6.00 minutes"
         ],
-        "correct": "1.0 minutes"
+        "correct": "2.0 minutes"
     },
     {
-        "id": "57",
-        "question": "If it takes 8 machines 7 minutes to make 6 crackers, how long would it take 80 machines to make 18 crackers?",
+        "id": "13",
+        "question": "If it takes 9 machines 1 minutes to make 15 crackers, how long would it take 90 machines to make 60 crackers?",
         "options": [
-            "3.11 minutes",
-            "0.64 minutes",
-            "6.24 minutes",
-            "4.20 minutes",
-            "2.1 minutes"
+            "0.4 minutes",
+            "4.19 minutes",
+            "1.20 minutes",
+            "1.15 minutes",
+            "-0.38 minutes"
         ],
-        "correct": "2.1 minutes"
+        "correct": "0.4 minutes"
     }
 ]
